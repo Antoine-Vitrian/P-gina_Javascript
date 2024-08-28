@@ -4,13 +4,15 @@ let counter = 0;
 
 document.getElementById("addNum").addEventListener('click', () => {
     let num = parseInt(document.getElementById("num").value);
-    if (!isNaN(num)) {
+    if (!isNaN(num) && counter != 10) {
         nums.push(num);
         counter++
         document.getElementById("numsDigitados").textContent = `Números digitados: ${counter}.`
+    } else if(conter == 10) {
+        alert("Você já digitou 10 números");
     } else {
         alert('Por favor insira um número válido.')
-    }    
+    }
 });
 
 function conseguirMedia(array) {
