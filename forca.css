@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    --teclaSize: 3em;
+}
+
+main {
+    height: 100vh;
+    background: yellow;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* forca */
+#forca {
+    width: 15em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-self: center;
+}
+#forcaDesenho {
+    position: relative;
+    width:100%;
+    height: 100%;
+}
+.traco {
+    height: 0.7em;
+    background: black;
+    position: absolute;
+}
+#traco1 {
+    width: 8em;
+    top: 100%
+}
+#traco2 {
+    width: 16em;
+    rotate: 90deg;
+    translate: -4em;
+    bottom: 7em;
+}
+#traco3 {
+    width: 9.5em;
+    bottom: 15em;
+    left: 4em;
+}
+#traco4 {
+    width: 4.6em;
+    rotate: 90deg;
+    right: -110%;
+    top: 55%;
+}
+.boneco {
+    position: relative;
+    height: 10em;
+    width: 5em;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    top: 80%;
+}
+.membro {
+    position: absolute;
+    background: black;
+    width: 0.3em;
+    height: 2.5em;
+    display: none;
+}
+#head {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 3em;
+    aspect-ratio: 1;
+    border: solid 0.3em;
+    border-radius: 50%;
+    display: none;
+}
+#body {
+    left: 50%;
+    transform: translate(-50%);
+    top: 3em;
+    width: 0.3em;
+    height: 4em;
+    background: black
+}
+#leftArm {
+    rotate: -45deg;
+    left: 29%;
+    top: 2.8em;
+}
+#rightArm {
+    rotate: 45deg;
+    left: 65%;
+    top: 2.8em;
+}
+#leftLeg {
+    rotate: 30deg;
+    top: 67%;
+    left: 34%;
+}
+#rightLeg {
+    rotate: -30deg;
+    top: 67%;
+    left: 59%;
+}
+
+/* palavra */
+#letrasAcertadas {
+    position: relative;
+}
+#letrasAcertadas .container {
+    position: absolute;
+    top: 50%;
+}
+#letrasErradas {
+    font-size: 1.5em;
+    margin-bottom: 2em;
+}
+#palavra {
+    font-weight: bolder;
+    font-size: 2em;
+    letter-spacing: 3px;
+}
+
+/* teclado */
+#teclado {
+    display: flex;
+    flex-flow: column;
+    gap: 0.3em;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    justify-self: center;
+    align-self: center;
+    background: rgb(43, 43, 75);
+    padding: 0.5em;
+    border-radius: 0.25em;
+}
+.row {
+    display: flex;
+    gap: 0.3em;
+}
+#row2 {
+    padding-left: 1em;
+}
+#row3 {
+    padding-left: 3em;
+}
+.letter {
+    width: var(--teclaSize);
+    aspect-ratio: 1;
+    text-align: center;
+    padding: 1em;
+    background: skyblue;
+    border-radius: 0.2em;
+    transition: 0.2s linear;
+}
+.letter:hover {
+    background: rgb(145, 145, 250);
+}
+.letter:active {
+    background: darkblue;
+    transform: scale(0.8);
+}
+
+#gameOver {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 80vh;
+    background: rgb(255, 254, 252);
+    border-radius: 2em;
+    box-shadow: -1.5em 1.5em black;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+#gameOver h1 {
+    font-size: 4em;
+    margin-bottom: 2em;
+    color: red;
+    text-shadow: 2px 2px black;
+}
+#gameOver p {
+    font-size: 1.5em;
+}
+#parabens {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 80vh;
+    background: rgb(255, 254, 252);
+    border-radius: 2em;
+    box-shadow: -1.5em 1.5em black;
+    display: none;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+#parabens h1 {
+    font-size: 4em;
+    margin-bottom: 2em;
+    color: lime;
+    text-shadow: 2px 2px black;
+}
+#parabens p {
+    font-size: 1.5em;
+}

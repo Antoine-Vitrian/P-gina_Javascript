@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca</title>
+    <link rel="stylesheet" href="forca.css">
+</head>
+<body>
+    <main>
+        <div id="forca">
+            <div id="forcaDesenho">
+                <div class="traco" id="traco1"></div>
+                <div class="traco" id="traco2"></div>
+                <div class="traco" id="traco3"></div>
+                <div class="traco" id="traco4"></div>
+            </div>
+            <div class="boneco">
+                <div id="head"></div>
+                <div class="membro" id="body"></div>
+                <div class="membro" id="leftArm"></div>
+                <div class="membro" id="rightArm"></div>
+                <div class="membro" id="leftLeg"></div>
+                <div class="membro" id="rightLeg"></div>
+            </div>
+        </div>
+        <div id="letrasAcertadas">
+            <div class="container">
+                <p id="letrasErradas">Letras erradas:</p>
+                <p id="palavra"></p>
+            </div>
+        </div>
+        <div id="teclado">
+            <div class="row">
+                <div class="letter" onclick="adicionarLetra('q', 'letraQ')" id="letraQ">q</div>
+                <div class="letter" onclick="adicionarLetra('w', 'letraW')" id="letraW">w</div>
+                <div class="letter" onclick="adicionarLetra('e', 'letraE')" id="letraE">e</div>
+                <div class="letter" onclick="adicionarLetra('r', 'letraR')" id="letraR">r</div>
+                <div class="letter" onclick="adicionarLetra('t', 'letraT')" id="letraT">t</div>
+                <div class="letter" onclick="adicionarLetra('y', 'letraY')" id="letraY">y</div>
+                <div class="letter" onclick="adicionarLetra('u', 'letraU')" id="letraU">u</div>
+                <div class="letter" onclick="adicionarLetra('i', 'letraI')" id="letraI">i</div>
+                <div class="letter" onclick="adicionarLetra('o', 'letraO')" id="letraO">o</div>
+                <div class="letter" onclick="adicionarLetra('p', 'letraP')" id="letraP">p</div>
+            </div>
+            <div class="row" id="row2">
+                <div class="letter" onclick="adicionarLetra('a', 'letraA')" id="letraA">a</div>
+                <div class="letter" onclick="adicionarLetra('s', 'letraS')" id="letraS">s</div>
+                <div class="letter" onclick="adicionarLetra('d', 'letraD')" id="letraD">d</div>
+                <div class="letter" onclick="adicionarLetra('f', 'letraF')" id="letraF">f</div>
+                <div class="letter" onclick="adicionarLetra('g', 'letraG')" id="letraG">g</div>
+                <div class="letter" onclick="adicionarLetra('h', 'letraH')" id="letraH">h</div>
+                <div class="letter" onclick="adicionarLetra('j', 'letraJ')" id="letraJ">j</div>
+                <div class="letter" onclick="adicionarLetra('k', 'letraK')" id="letraK">k</div>
+                <div class="letter" onclick="adicionarLetra('l', 'letraL')" id="letraL">l</div>
+                <div class="letter" onclick="adicionarLetra('ç', 'letraÇ')" id="letraÇ">ç</div>
+            </div>
+            <div class="row" id="row3">
+                <div class="letter" onclick="adicionarLetra('z', 'letraZ')" id="letraZ">z</div>
+                <div class="letter" onclick="adicionarLetra('x', 'letraX')" id="letraX">x</div>
+                <div class="letter" onclick="adicionarLetra('c', 'letraC')" id="letraC">c</div>
+                <div class="letter" onclick="adicionarLetra('v', 'letraV')" id="letraV">v</div>
+                <div class="letter" onclick="adicionarLetra('b', 'letraB')" id="letraB">b</div>
+                <div class="letter" onclick="adicionarLetra('n', 'letraN')" id="letraN">n</div>
+                <div class="letter" onclick="adicionarLetra('m', 'letraM')" id="letraM">m</div>
+            </div>
+        </div>
+        <div id="parabens">
+            <h1>Parabéns</h1>
+            <h2>Você acertou a palavra secreta</h2>
+        </div>
+        <div id="gameOver">
+            <h1>Game Over</h1>
+            <p>Você falhou</p>
+            <p id="palavraSecreta"></p>
+        </div>
+    </main>
+    <script src="forca.js"></script>
+</body>
+</html>
