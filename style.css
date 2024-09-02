@@ -45,7 +45,7 @@ main {
 }
 .container {
     border: solid 0.2em skyblue;
-    border-radius: 0.125em;
+    border-radius: 0.5em;
     background: rgb(0, 38, 49);
     padding: 2em;
     text-align: center;
