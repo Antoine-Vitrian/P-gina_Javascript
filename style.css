@@ -6,7 +6,7 @@
 }
 :root {
     --headerSize: 8vh;
-    --mainSize: calc(100vh - var(--headerSize));
+    --mainSize: calc(100vh - var(--headerSize) );
     --backgroundColor: linear-gradient(
         -135deg,
         rgb(255, 255, 163),
@@ -36,17 +36,13 @@ header {
 }
 main {
     height: var(--mainSize);
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    justify-items: center;
-    gap: 1em;
     position: relative;
+    overflow-x: clip;
 }
 main::after {
     content: '';
     width: 100%;
-    height: 120%;
+    height: 100vh;
     position: absolute;
     inset: 0;
     z-index: -1;
@@ -60,7 +56,7 @@ main::after {
     padding: 2em;
     text-align: center;
     margin: 0;
-    width: 70%;
+    width: 30em;
 }
 .container h3 {
     margin-bottom: 1em;
@@ -71,4 +67,12 @@ main::after {
     display: flex;
     flex-flow: column;
     text-align: left;
+}
+.carousel {
+    height: 100%;
+    display: flex;
+    gap: 15em;
+    align-items: center;
+    min-width: fit-content;
+    padding-inline: 10em;
 }
