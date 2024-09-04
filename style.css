@@ -14,7 +14,7 @@
     );
 }
 
-a {
+.paginas a {
     text-decoration: none;
     color: skyblue;
     margin: 0.125em 0;
@@ -37,7 +37,6 @@ header {
 main {
     height: var(--mainSize);
     position: relative;
-    overflow-x: clip;
 }
 main::after {
     content: '';
@@ -49,13 +48,51 @@ main::after {
     top: calc(-1 * var(--headerSize));
     background: var(--backgroundColor);
 }
+.carousel {
+    height: 100%;
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+#slider-nav {
+    position: absolute;
+    bottom: 1em;
+    left: 50vw;
+    transform: translate(-50%);
+}
+#slider-nav a {
+    width: 1.3em;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: rgb(44, 151, 201);
+    opacity: 0.7;
+    margin-inline: 0.5em;
+    display: inline-flex;
+    transition: 0.25s ease-in;
+}
+#slider-nav a:hover {
+    opacity: 1;
+}
+#slider-nav a:active {
+    background-color: black;
+}
+.slide {
+    flex-shrink: 0;
+    width: 100%;
+    /* scroll-snap-align: start; */
+}
 .container {
     border: solid 0.2em skyblue;
     border-radius: 0.5em;
     background: rgba(0, 38, 49, 0.651);
     padding: 2em;
     text-align: center;
-    margin: 0;
     width: 30em;
 }
 .container h3 {
@@ -64,15 +101,7 @@ main::after {
 }
 .paginas {
     color: skyblue;
-    display: flex;
-    flex-flow: column;
     text-align: left;
-}
-.carousel {
-    height: 100%;
-    display: flex;
-    gap: 15em;
-    align-items: center;
-    min-width: fit-content;
-    padding-inline: 10em;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
 }
