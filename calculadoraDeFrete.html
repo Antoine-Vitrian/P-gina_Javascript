@@ -5,29 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de frete</title>
     <link rel="stylesheet" href="calculadoraDeFrete.css">
+    <link rel="stylesheet" href="style-geral.css">
 </head>
 <body>
-<section>
-    
-    <h1>Calculadora de frete</h1>
+    <header>
+        <a href="index.html">Página Javascript</a>
+     </header>
     <main>
-    <div class="container">
-        <label for="peso">Digite o preço</label>
-        <input type="number" id="peso">
+        <h1>Calculadora de frete</h1>
+        <div class="container">
+            <label for="peso">Digite o preço</label>
+            <input type="number" id="peso">
 
-        <label for="regiao">Escolha a região</label>
-        <select name="" id="regiao">
-            <option value="">Selecione uma opção</option>
-            <option value="norte">Norte</option>
-            <option value="centro-oeste">Centro-oeste</option>
-            <option value="sul">Sul</option>
-        </select>
-        <p id="resposta"></p>
-        <button onclick="calcularFrete()">Verificar</button>
-    </div>
+            <label for="regiao">Escolha a região</label>
+            <select name="" id="regiao">
+                <option value="">Selecione uma opção</option>
+                <option value="norte">Norte</option>
+                <option value="centro-oeste">Centro-oeste</option>
+                <option value="sul">Sul</option>
+            </select>
+            <p id="resposta"></p>
+            <button onclick="calcularFrete()">Verificar</button>
+        </div>
     </main>
     <script src="calculadoraFrete.js"></script>
-    </div>
-</section>
 </body>
 </html>

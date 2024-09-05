@@ -5,25 +5,13 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 :root {
-    --headerSize: 8vh;
+    --headerSize: 14vh;
     --mainSize: calc(100vh - var(--headerSize) );
-    --backgroundColor: linear-gradient(
-        -135deg,
-        rgb(255, 255, 163),
-        yellow
-    );
+    --wallpaper: url(imgs/wallpaper.png);
+    --color1: rgb(81, 255, 0);
+    --color2: rgba(0, 12, 116, 0.651);
 }
 
-.paginas a {
-    text-decoration: none;
-    color: skyblue;
-    margin: 0.125em 0;
-    transition: color 100ms ease-in-out;
-}
-a:hover {
-    color: white;
-    text-decoration-line: underline;
-}
 header {
     background: linear-gradient(
         black 70%,
@@ -33,6 +21,7 @@ header {
     color: white;
     display: flex;
     align-items: center;
+    font-size: 2em;
 }
 main {
     height: var(--mainSize);
@@ -46,7 +35,8 @@ main::after {
     inset: 0;
     z-index: -1;
     top: calc(-1 * var(--headerSize));
-    background: var(--backgroundColor);
+    background: var(--wallpaper) no-repeat;
+    background-size: cover;
 }
 .carousel {
     height: 100%;
@@ -70,7 +60,7 @@ main::after {
     width: 1.3em;
     aspect-ratio: 1;
     border-radius: 50%;
-    background-color: rgb(44, 151, 201);
+    background-color: var(--color1);
     opacity: 0.7;
     margin-inline: 0.5em;
     display: inline-flex;
@@ -88,20 +78,36 @@ main::after {
     /* scroll-snap-align: start; */
 }
 .container {
-    border: solid 0.2em skyblue;
+    border: solid 0.3em var(--color1);
     border-radius: 0.5em;
-    background: rgba(0, 38, 49, 0.651);
+    background: var(--color2);
     padding: 2em;
     text-align: center;
     width: fit-content;
+    box-shadow: 1em 1em 3em black;
 }
 .container h3 {
     margin-bottom: 1em;
-    color: white;
+    font-size: 2em;
+    color: var(--color1);
+}
+.paginas a {
+    text-decoration: none;
+    color: var(--color1);
+    margin: 0.125em 0;
+    font-size: 1.5em;
+    text-shadow: white 2px 2px 0.15rem;
+    padding: 0.1rem;
+    transition: 100ms ease-in-out;
+}
+.paginas a:hover {
+    text-decoration-line: underline;
+    box-shadow: 1px 1px 0.4em white;
+    transform: scale(1.1);
 }
 .paginas {
     color: skyblue;
-    text-align: left;
+    text-align: center;
     display: grid;
     column-gap: 1em;
     grid-template-columns: repeat(2,1fr);

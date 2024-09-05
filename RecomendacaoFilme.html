@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recomendação de filmes</title>
     <script src="RecomendacaoFilme.js"> </script>
-    <link rel="stylesheet" href="recomendacaoFilme.css">
+    <link rel="stylesheet" href="style-geral.css">
 </head>
 <body>
-    <section>
+    <header>
+        <a href="index.html">Página Javascript</a>
+    </header>
+    <main>
         <h1>Recomendação de filmes</h1>
         <div class="container">
             <input type="number"id=idade>
@@ -22,11 +25,10 @@
                 <option value="romance">Romance</option>
                 <option value="documentario">Documentário</option>
             </select>
-            <br> <br>
             <button onclick="classificacao()">Obter recomendação</button>
             <div id="recomendacao"></div>
         </div>
-    </section>
+    </main>
 
 
 </body>

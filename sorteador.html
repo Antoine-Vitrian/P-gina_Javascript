@@ -5,15 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sorteador</title>
     <link rel="stylesheet" href="sorteador.css">
+    <link rel="stylesheet" href="style-geral.css">
     <script src="sorteador.js"></script>
 </head>
 <body>
-    <h1>Sorteador de números</h1>
-    <div class="container">
-        <p>Chute um número entre 1 e 10!<p>
-        <input type="number" id="guess">
-        <button onclick="sorteador()">Verificar</button>
-        <div id="print"></div>
-    </div>
+    <header>
+        <a href="index.html">Página Javascript</a>
+    </header>
+    <main>
+        <h1>Sorteador de números</h1>
+        <div class="container">
+            <p>Chute um número entre 1 e 10!<p>
+            <input type="number" id="guess">
+            <button onclick="sorteador()">Verificar</button>
+            <p id="print"></p>
+        </div>
+    </main>
 </body>
 </html>

@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="tabuada.js"></script>
+    <link rel="stylesheet" href="style-geral.css">
+    <link rel="stylesheet" href="tabuada.css">
 </head>
 <body>
-    <p id="resposta"></p>
+    <header>
+        <a href="index.html">Página Javascript</a>
+    </header>
+    <main>
         <h1>tabuada</h1>
-        <input type="number" id="numero" placeholder="digite o numero que deseja saber a tabuada">
+        <div class="container">
+        <input type="number" id="numero" placeholder="digite o numero">
         <button onclick="SaberTabuada()">verificar</button>
-        
+        <p id="resposta"></p>
+        </div>
+    </main>
 </body>
 </html>

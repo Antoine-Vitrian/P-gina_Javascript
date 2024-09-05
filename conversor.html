@@ -6,21 +6,27 @@
     <title>Document</title>
     <script src="conversor.js"></script>
     <link rel="stylesheet" href="conversor.css">
+    <link rel="stylesheet" href="style-geral.css">
 </head>
 <body>
-    <h1> Conversor de moedas </h1>
-    <div class="container">
-    <label for="real"> Digite o valor em R$ </label>
-    <input type="number" id="real">
-    <select name="moedas" id="moedas">
-        <option value=""></option>
-        <option value="dolar"> Dólar </option>
-        <option value="euro"> Euro </option>
-        <option value="libra_esterlina"> Libra Esterlina </option>
-        <option value="franco_suico"> Franco Suiço </option>
-    </select>
-    <button onclick="conversao()"> Converter </button>
-    <div id="conversao"></div>
-    </div>
+    <header>
+        <a href="index.html">Página Javascript</a>
+    </header>
+    <main>
+        <h1> Conversor de moedas </h1>
+        <div class="container">
+        <label for="real"> Digite o valor em R$ </label>
+        <input type="number" id="real">
+        <select name="moedas" id="moedas">
+            <option value=""></option>
+            <option value="dolar"> Dólar </option>
+            <option value="euro"> Euro </option>
+            <option value="libra_esterlina"> Libra Esterlina </option>
+            <option value="franco_suico"> Franco Suiço </option>
+        </select>
+        <button onclick="conversao()"> Converter </button>
+        <div id="conversao"></div>
+        </div>
+    </main>
 </body>
 </html>
