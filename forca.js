@@ -51,6 +51,7 @@ function adicionarLetra(letra, id) {
     if (letrasAcertadas === palavra) {
         const parabensWindow = document.getElementById("parabens");
         parabensWindow.style.display = "flex";
+
     }
     if (erros === maxErros) {
         const gameOverWindow = document.getElementById("gameOver");
