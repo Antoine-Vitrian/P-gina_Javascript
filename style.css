@@ -96,9 +96,12 @@ main::after {
     color: var(--color1);
     margin: 0.125em 0;
     font-size: 1.5em;
-    text-shadow: white 2px 2px 0.15rem;
+    text-shadow: white 1px 1px 0.5rem;
     padding: 0.1rem;
     transition: 100ms ease-in-out;
+}
+.paginas:hover a:not(:hover) {
+    color: rgb(145, 175, 160);
 }
 .paginas a:hover {
     text-decoration-line: underline;

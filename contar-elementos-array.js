@@ -17,5 +17,5 @@ document.getElementById("contar").addEventListener('click', () => {
 });
 
 document.getElementById("mostrar").addEventListener('click', () => {
-    document.getElementById("mostrarArray"). textContent = elementos;
+    document.getElementById("mostrarArray").innerHTML = elementos;
 });
