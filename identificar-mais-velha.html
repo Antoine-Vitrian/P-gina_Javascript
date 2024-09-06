@@ -5,20 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Identificar a pessoa mais velha</title>
     <link rel="stylesheet" href="style-geral.css">
+    <link rel="stylesheet" href="identificar-mais-velha.css">
 </head>
 <body>
     <header>
         <a href="index.html">Página Javascript</a>
     </header>
     <main>
-        <h1 style="text-align: center;">Digite o nome de 5 pessoas e suas idades e direi quem é a mais velha</h1>
-        <div class="container">
+        <h1 style="text-align: center; top: 20%;">Digite o nome de 5 pessoas e suas idades e direi quem é a mais velha</h1>
+        <div class="container" id="content">
             <input type="text" id="nome" placeholder="Nome">
             <input type="number" id="idade" placeholder="Idade">
             <button onclick="adicionarPessoa(pessoas)">Adicionar pessoa</button>
             <button onclick="identificarMaisVelho(pessoas)">Checar</button>
             <button onclick="mostrarPessoas(pessoas)">Mostrar pessoas</button>
-            <p id="quantidade-pessoas"></p>
+            <p id="quantidade-pessoas">Quantidade de pessoas: <span id="counter">0</span></p>
             <p id="resposta"></p>
             <p id="pessoas"></p>
         </div>

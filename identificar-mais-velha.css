@@ -1,0 +1,23 @@
+#content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    top: 40%;
+}
+input:nth-of-type(2) {
+    grid-row-start: 2;
+}
+button {
+    grid-column-start: 2;
+}
+#quantidade-pessoas {
+    grid-row-start: 1;
+    grid-column-start: 3;
+}
+#pessoas {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 3;
+}
+#resposta {
+    grid-column: 2;
+}
