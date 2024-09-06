@@ -7,7 +7,6 @@ function somarArray(){
     numero.push(parseInt(document.getElementById('number').value));
     numero.push(parseInt(document.getElementById('number2').value));
     numero.push(parseInt(document.getElementById('number3').value));
-    alert(numero);
     const soma = numero.reduce((accumulator, currentValue) => accumulator + currentValue);
     ;
 

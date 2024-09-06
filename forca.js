@@ -50,14 +50,17 @@ function adicionarLetra(letra, id) {
     // checar se o usuário venceu ou perdeu
     if (letrasAcertadas === palavra) {
         const parabensWindow = document.getElementById("parabens");
+        const game = document.getElementById("game");
         parabensWindow.style.display = "flex";
-
+        game.style.display = "none";
     }
     if (erros === maxErros) {
         const gameOverWindow = document.getElementById("gameOver");
         const palavraSecreta = document.getElementById("palavraSecreta");
+        const game = document.getElementById("game");
         gameOverWindow.style.display = "flex";
         palavraSecreta.textContent = `A palavra era: ${palavra}`;
+        game.style.display = "none";
     }
 
     // montar o boneco
