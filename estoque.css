@@ -1,0 +1,5 @@
+#items {
+    max-height: 11em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}

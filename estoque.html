@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style-geral.css">
+    <link rel="stylesheet" href="estoque.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">Página Javascript</a>
+    </header>
+    <main>
+        <h1 style="top: 20%;">Estoque</h1>
+        <div class="container" style="top: 30%">
+            <label for="item">Nome do item:</label>
+            <input type="text" id="nome">
+            <label for="preco">Preço do item</label>
+            <input type="number" id="preco">
+            <button onclick="adicionarItem(estoque, texto)">Adicionar item</button>
+            <div id="items"></div>
+        </div>
+    </main>
+    <script src="estoque.js"></script>
+</body>
+</html>
