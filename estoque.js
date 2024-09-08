@@ -22,14 +22,15 @@ function adicionarItem(array, text) {
     array.push(item);
 
     posicao = text.length;
-    text.push(`nome: ${item.nome}; preço: ${item.preco}. <button onclick="removerItem(estoque, texto, ${item.id})">Remover</button> <br><br>`);
-    document.getElementById('items').innerHTML = text;
+    text.push(`<div class="item">nome: ${item.nome}; preço: ${item.preco}. <button onclick="removerItem(estoque, texto, ${item.id})">Remover</button></div>`);
+    document.getElementById('items').innerHTML += text[text.length - 1];
 }
 
 function removerItem(array, text, id) {
+    let itemsDisplay = document.getElementById('items');
     let index = array.findIndex(item => item.id === id)
 
     array.splice(index, 1);
+    itemsDisplay.innerHTML = itemsDisplay.innerHTML.replace(text[index], '');
     text.splice(index, 1);
-    document.getElementById('items').innerHTML = text;
 }
